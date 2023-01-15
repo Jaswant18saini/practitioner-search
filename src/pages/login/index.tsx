@@ -14,9 +14,9 @@ return(
       noValidate
       autoComplete="off"
     >
-        <h2>Login</h2>
+      <h2>Login</h2>
       <TextField id="filled-basic" label="Email" variant="filled" />
-      <TextField id="filled-basic" label="Password" variant="filled" />
+      <TextField id="filled-basic" label="Password" variant="filled" type="password" />
 
 
        <Button variant="contained">Login</Button>
