@@ -1,16 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle` 
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+ 
 
 :root{
    --common-font:  'Nunito', sans-serif;
-
+   --btn-color: #EA862C;
+   --purple: #572B73;
+   --black: #040404;
+   --pink: #A31265;
 }
   * {
 margin: 0;
 padding: 0;
 font-family: var(--common-font);
+box-sizing: border-box; 
 }
 
 
@@ -102,5 +106,74 @@ font-family: var(--common-font);
     transform: translateX(-230px);
 }
 }
+button.MuiButton-containedPrimary {
+   color: #fff;
+    text-align: center;
+    border: 2px solid transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+    border-radius: 3px;
+    font-size: 16px; 
+    background: var(--btn-color);
+    box-shadow: none;
+    font-family: var(--commont-font);
+    width: 100%;
+    max-width: 150px;
+    &:hover{
+      color:  var(--btn-color);
+    border: 2px solid  var(--btn-color);
+    background: transparent;
+    }
+    &:hover:before,&:hover::after {
+    width: 0;
+    opacity: 1;
+    visibility: visible;
+}
+    &::before{
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .7s ease;
+      z-index: -1;
+      border-radius: 3px;
+    }
+    &:after{
+      position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .7s ease;
+    z-index: -1;
+    }
+    &:hover:before {
+      background:  var(--btn-color);
+  }
+    &:hover:after{
+      background:  var(--btn-color);
+    }
+}
+
+
+
+
+.dash {
+    background: var(--purple);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+/* body css remove */
 `;
 export default GlobalStyle;

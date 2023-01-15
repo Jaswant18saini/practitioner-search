@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main className={styles.main} id="wrapper">
         {/* <Header /> */}
-
+        <div className="dash">Dashboard</div>
         {/* <Drawer /> */}
       </main>
     </>

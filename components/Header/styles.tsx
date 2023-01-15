@@ -110,5 +110,21 @@ a.logo{
 }
 
 }
-
+.header_actions { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a{
+        display: inline-flex;
+        svg {
+                color: #572B73;
+            }
+    }
+}
 `;
