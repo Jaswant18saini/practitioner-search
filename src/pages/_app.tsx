@@ -1,24 +1,38 @@
 import GlobalStyle from "@/globalstyles";
 import "@/styles/globals.css";
+import { Box } from "@mui/material";
 import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
 import SideBar from "components/SideBar/SideBar";
 import type { AppProps } from "next/app";
-import { Box } from "@mui/material";
-import { useState } from "react";
+
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isactive, setIsActive] = useState(false)
+  const router = useRouter();
+  const [isactive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    console.log("router", router.pathname == "/login");
+  }, []);
   return (
     <>
       <GlobalStyle />
-      <Box className={`main_components ${isactive ? 'active' : 'not-active'}`}>
-        <Header setIsActive={setIsActive} />
-        <SideBar />
+      {router.pathname == "/login" ? (
         <Component {...pageProps} />
-        <Footer />
-      </Box>
-
+      ) : (
+        <>
+          <Box
+            className={`main_components ${isactive ? "active" : "not-active"}`}
+          >
+            <Header setIsActive={setIsActive} />
+            <SideBar />
+            <Component {...pageProps} />
+            <Footer />
+          </Box>
+        </>
+      )}
     </>
   );
 }
