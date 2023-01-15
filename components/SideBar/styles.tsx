@@ -16,14 +16,12 @@ export const Sidebarstyles = styled.div`
     background: rgb(40, 36, 61);
 }
  
-#sidebar {
-  ul {
-    padding-top: 10px;
-}
-    ul li a {
+#sidebar { 
+    ul{
+        padding-top: 10px;
+        li a {
     color: #fff;
-    padding: 12px 25px;
-    display: block;
+    padding: 12px 25px; 
     position: relative;
     font-size: 14px;
     -webkit-transition: 0.3s ease all;
@@ -37,17 +35,19 @@ export const Sidebarstyles = styled.div`
      background: rgba(231, 227, 252, 0.04);
     }
 }
+}
 
 li.active a,li.active a:hover{
     box-shadow: rgb(58 53 65 / 42%) 0px 4px 8px -4px;
-    background-image: linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%);
+    background: rgb(178,157,191);
+background: -moz-linear-gradient(90deg, rgba(178,157,191,1) 0%, rgba(87,43,115,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(178,157,191,1) 0%, rgba(87,43,115,1) 100%);
+background: linear-gradient(90deg, rgba(178,157,191,1) 0%, rgba(87,43,115,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b29dbf",endColorstr="#572b73",GradientType=1);
      
 }
 }
-.active #sidebar {
-    transform: translateX(-230px);
-}
-
+ 
  
 
 `;
