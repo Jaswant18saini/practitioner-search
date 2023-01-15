@@ -17,9 +17,12 @@ export const Sidebarstyles = styled.div`
 }
  
 #sidebar {
+  ul {
+    padding-top: 10px;
+}
     ul li a {
     color: #fff;
-    padding: 12px 25px 12px 55px;
+    padding: 12px 25px;
     display: block;
     position: relative;
     font-size: 14px;
@@ -28,18 +31,22 @@ export const Sidebarstyles = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    border-radius: 0 10px 10px 0;
+    margin: 0 10px 0 0;
     &:hover {
-        box-shadow: rgb(58 53 65 / 42%) 0px 4px 8px -4px;
-        background-image: linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%);
+     background: rgba(231, 227, 252, 0.04);
     }
 }
 
-li.active a{
+li.active a,li.active a:hover{
     box-shadow: rgb(58 53 65 / 42%) 0px 4px 8px -4px;
     background-image: linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%);
+     
 }
 }
-
+.active #sidebar {
+    transform: translateX(-230px);
+}
 
  
 

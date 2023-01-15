@@ -11,11 +11,10 @@ export default function SideBar() {
             <Box id="sidebar" className="sidebar">
                 <ul>
                     <li className="active">
-                        <a href="#">
-                            <HomeIcon /> Dashboard</a>
+                        <a href="#"> <HomeIcon /> Dashboard</a>
                     </li>
                     <li className="">
-                        <a href="#">    <HomeIcon /> Leads</a>
+                        <a href="#"><HomeIcon /> Leads</a>
                     </li>
 
                 </ul>

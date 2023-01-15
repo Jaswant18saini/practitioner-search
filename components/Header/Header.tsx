@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Headerstyles } from "./styles";
-export default function Header() {
+export default function Header({ setIsActive }: any) {
 
     return (
         <Headerstyles>
@@ -12,7 +12,7 @@ export default function Header() {
                                 <a className="logo animated fadeIn" href="#">
                                     <img src="./Images/logo.png" />
                                 </a>
-                                <a className="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar">
+                                <a className="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar" onClick={() => setIsActive((prev: any) => !prev)}>
 
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 55.2">
                                         <rect y="0.6" width="72" height="10"></rect>
@@ -46,6 +46,6 @@ export default function Header() {
                     </div>
                 </div>
             </header>
-        </Headerstyles>
+        </Headerstyles >
     )
 }

@@ -30,7 +30,7 @@ export const Headerstyles = styled.div`
 }
  
 #header {
-    box-shadow: 0px 3px 21px rgb(214 191 147 / 60%);
+    box-shadow: 0px 3px 21px rgb(194 161 254 / 42%);
     height: 60px;
     position: fixed;
     left: 0;
