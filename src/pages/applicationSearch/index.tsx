@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
 import LayoutWithLogin from "@/Layout";
-import { ApplicationSearchStyles } from "./styles";
+import ApplicationSearchStyles from "./styles";
 
 const ApplicationSearch = () => {
   const [type, setType] = useState("Any");

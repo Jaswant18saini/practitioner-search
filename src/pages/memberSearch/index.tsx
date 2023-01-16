@@ -12,7 +12,7 @@ import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 import LayoutWithLogin from "@/Layout";
-import { MemberSearchStyles } from "./styles";
+import MemberSearchStyles from "./styles";
 
 type Inputs = {
   memberShipNo: Number;

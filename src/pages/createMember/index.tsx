@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
 import LayoutWithLogin from "@/Layout";
-import { CreateMemberSearchStyles } from "./styles";
+import CreateMemberSearchStyles from "./styles";
 
 const CreateMember = () => {
   const [type, setType] = useState("associate");
