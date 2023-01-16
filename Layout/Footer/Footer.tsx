@@ -2,21 +2,15 @@
 
 import { Box } from "@mui/material";
 import * as React from "react";
-import { Footerstyles } from "./styles";
-export default function Footer() {
-    
+import { Footerstyles } from "./Foooter.styles";
 
 
-
-
-
-
-return(
-    <Footerstyles>
-       <Box id="footer">
-           <h1>Footer</h1>
-
-           <ul>
+const Footer = () => {
+    return (
+        <Footerstyles>
+            <Box id="footer">
+                <h1>Footer</h1>
+                <ul>
                     <li className="">
                         <a href="#">About</a>
                     </li>
@@ -37,8 +31,9 @@ return(
                     </li>
 
                 </ul>
-        </Box>
+            </Box>
         </Footerstyles>
-)
-
+    );
 }
+
+export default Footer;

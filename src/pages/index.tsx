@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Drawer from "components/Drawer/Drawer";
-import Header from "components/Header/Header";
+import Header from "Layout/Header/Header";
 
 export default function Home() {
   return (

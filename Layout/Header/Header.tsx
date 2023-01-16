@@ -1,8 +1,9 @@
 import * as React from "react";
-import { Headerstyles } from "./styles";
+import { Headerstyles } from "./Header.styles";
 import PersonIcon from "@mui/icons-material/Person";
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
-export default function Header({ setIsActive }: any) {
+
+function Header({ setIsActive }: any) {
     return (
         <Headerstyles>
             <header id="header">
@@ -71,3 +72,5 @@ export default function Header({ setIsActive }: any) {
         </Headerstyles>
     );
 }
+
+export default Header;

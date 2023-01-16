@@ -1,8 +1,8 @@
-import GlobalStyle from "@/globalstyles";
+import GlobalStyle from "@/styles/globalstyles";
 import "@/styles/globals.css";
 import { Box } from "@mui/material";
-import Footer from "components/Footer/Footer";
-import Header from "components/Header/Header";
+import Footer from "Layout/Footer/Footer";
+import Header from "Layout/Header/Header";
 import SideBar from "components/SideBar/SideBar";
 import type { AppProps } from "next/app";
 
