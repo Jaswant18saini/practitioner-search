@@ -5,10 +5,10 @@ const GlobalStyle = createGlobalStyle`
 
 :root{
    --common-font:  'Nunito', sans-serif;
-   --btn-color: #EA862C;
-   --purple: #572B73;
-   --black: #040404;
-   --pink: #A31265;
+   --orange:${(props) => props.theme.colors.orange};
+   --purple:${(props) => props.theme.colors.purple};
+   --black:${(props) => props.theme.colors.black};
+   --pink: ${(props) => props.theme.colors.pink};
 }
   * {
 margin: 0;
@@ -117,14 +117,14 @@ button.MuiButton-containedPrimary {
     transition: all .7s ease;
     border-radius: 3px;
     font-size: 16px; 
-    background: var(--btn-color);
+    background: var(--orange);
     box-shadow: none;
     font-family: var(--commont-font);
     width: 100%;
     max-width: 150px;
     &:hover{
-      color:  var(--btn-color);
-    border: 2px solid  var(--btn-color);
+      color:  var(--orange);
+    border: 2px solid  var(--orange);
     background: transparent;
     }
     &:hover:before,&:hover::after {
@@ -158,16 +158,12 @@ button.MuiButton-containedPrimary {
     z-index: -1;
     }
     &:hover:before {
-      background:  var(--btn-color);
+      background:  var(--orange);
   }
     &:hover:after{
-      background:  var(--btn-color);
+      background:  var(--orange);
     }
 }
-
-
-
-
 .dash {
     background: var(--purple);
     padding: 10px 15px;

@@ -1,44 +1,34 @@
-
-
-import { Box } from "@mui/material";
 import * as React from "react";
+import { Box } from "@mui/material";
 import { Footerstyles } from "./styles";
+
 export default function Footer() {
-    
-
-
-
-
-
-
-return(
+  return (
     <Footerstyles>
-       <Box id="footer">
-           <h1>Footer</h1>
+      <Box id="footer">
+        <h1>Footer</h1>
 
-           <ul>
-                    <li className="">
-                        <a href="#">About</a>
-                    </li>
-                    <li className="">
-                        <a href="#">Personalised Nutrition</a>
-                    </li>
-                    <li className="">
-                        <a href="#">Resources</a>
-                    </li>
-                    <li className="">
-                        <a href="#">Connect</a>
-                    </li>
-                    <li className="">
-                        <a href="#">Media & News</a>
-                    </li>
-                    <li className="">
-                        <a href="#">Contact</a>
-                    </li>
-
-                </ul>
-        </Box>
-        </Footerstyles>
-)
-
+        <ul>
+          <li className="">
+            <a href="#">About</a>
+          </li>
+          <li className="">
+            <a href="#">Personalised Nutrition</a>
+          </li>
+          <li className="">
+            <a href="#">Resources</a>
+          </li>
+          <li className="">
+            <a href="#">Connect</a>
+          </li>
+          <li className="">
+            <a href="#">Media & News</a>
+          </li>
+          <li className="">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </Box>
+    </Footerstyles>
+  );
 }
