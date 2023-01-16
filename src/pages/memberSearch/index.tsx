@@ -54,7 +54,8 @@ const MemeberStatus = [
 ];
 
 const MemberSearch = () => {
-  const [age, setAge] = useState("");
+  const [age, setAge] = useState("Any");
+  const [memberShipStatus, setMemberShipStatus] = useState("Any");
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
@@ -73,21 +74,25 @@ const MemberSearch = () => {
   return (
     <LayoutWithLogin>
       <MemberSearchStyles>
-        <Box component="main"
-          id="wrapper">
+        <Box component="main" id="wrapper">
           <div className="dash">Member Search</div>
           <Box className="form-bg">
             <img src="/Images/pattern.webp" className="bg-pattern" />
             <Box className="box-form">
-              <h2> Please specify the criteria for your member search.
-                For help with the Member Search click  <Link href="https://bant.org.uk/bant/jsp/searchHelp.faces">here</Link></h2>
+              <h2>
+                {" "}
+                Please specify the criteria for your member search. For help
+                with the Member Search click{" "}
+                <Link href="https://bant.org.uk/bant/jsp/searchHelp.faces">
+                  here
+                </Link>
+              </h2>
               <Box
                 component="form"
                 className="form_memberSearch"
                 noValidate
                 onSubmit={handleSubmit(onSubmit)}
               >
-
                 <Box className="d_Flex">
                   <Box className="form_Group">
                     <InputLabel>Membership No</InputLabel>
@@ -112,9 +117,9 @@ const MemberSearch = () => {
                           id="demo-simple-select"
                           label="Age"
                           onChange={onChange}
-                          defaultValue={""}
+                          defaultValue={"Any"}
                         >
-                          <MenuItem value={""}>Any</MenuItem>
+                          <MenuItem value={"Any"}>Any</MenuItem>
                           {MemeberShipTypes?.map((val, index) => {
                             return (
                               <MenuItem key={index} value={val?.value}>
@@ -176,14 +181,15 @@ const MemberSearch = () => {
                     control={control}
                     name="memberStatus"
                     render={({ field: { onChange, onBlur, value, ref } }) => (
-                      <Select className="form_Control"
+                      <Select
+                        className="form_Control"
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
-                        defaultValue={value}
+                        defaultValue={"Any"}
                         label="Any"
                         onChange={onChange}
                       >
-                        <MenuItem value={""}>Any</MenuItem>
+                        <MenuItem value={"Any"}>Any</MenuItem>
                         {MemeberStatus?.map((val, index) => {
                           return (
                             <MenuItem key={index} value={val?.value}>
@@ -196,14 +202,16 @@ const MemberSearch = () => {
                   />
                 </Box>
                 <Box className="btn-cont">
-                  <Button type="submit" className="MuiButton-containedPrimary">Submit</Button>
+                  <Button type="submit" className="MuiButton-containedPrimary">
+                    Submit
+                  </Button>
                 </Box>
               </Box>
             </Box>
           </Box>
         </Box>
       </MemberSearchStyles>
-    </LayoutWithLogin >
+    </LayoutWithLogin>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Box,
+  Button,
   InputLabel,
   MenuItem,
   Select,
@@ -11,8 +12,8 @@ import LayoutWithLogin from "@/Layout";
 import { ApplicationSearchStyles } from "./styles";
 
 const ApplicationSearch = () => {
-  const [type, setType] = useState("");
-  const [status, setStatus] = useState("");
+  const [type, setType] = useState("Any");
+  const [status, setStatus] = useState("submitted");
 
   const handleChangeType = (event: SelectChangeEvent) => {
     setType(event.target.value as string);
@@ -65,9 +66,7 @@ const ApplicationSearch = () => {
   return (
     <ApplicationSearchStyles>
       <LayoutWithLogin>
-        <Box component="main"
-          className={styles.main}
-          id="wrapper">
+        <Box component="main" className={styles.main} id="wrapper">
           <Box className="form-bg">
             <img src="/Images/pattern.webp" className="bg-pattern" />
 
@@ -78,14 +77,15 @@ const ApplicationSearch = () => {
               <Box>
                 <Box className="form_Group">
                   <InputLabel>Application Type</InputLabel>
-                  <Select className="form_Control"
+                  <Select
+                    className="form_Control"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     label="Age"
                     onChange={handleChangeType}
                     value={type}
                   >
-                    <MenuItem value={""}>Any</MenuItem>
+                    <MenuItem value={"Any"}>Any</MenuItem>
                     {applicationType?.map((val, index) => {
                       return (
                         <MenuItem key={index} value={val?.value}>
@@ -97,14 +97,15 @@ const ApplicationSearch = () => {
                 </Box>
                 <Box className="form_Group">
                   <InputLabel>Application status</InputLabel>
-                  <Select className="form_Control"
+                  <Select
+                    className="form_Control"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     label="Age"
                     onChange={handleChangeStatus}
                     value={status}
                   >
-                    <MenuItem value={""}>Any</MenuItem>
+                    <MenuItem value={"Any"}>Any</MenuItem>
                     {applicationStatus?.map((val, index) => {
                       return (
                         <MenuItem key={index} value={val?.value}>
@@ -113,6 +114,9 @@ const ApplicationSearch = () => {
                       );
                     })}
                   </Select>
+                </Box>
+                <Box className="form_Group">
+                  <Button className="MuiButton-containedPrimary">Search</Button>
                 </Box>
               </Box>
             </Box>

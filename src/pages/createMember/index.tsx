@@ -13,7 +13,7 @@ import LayoutWithLogin from "@/Layout";
 import { CreateMemberSearchStyles } from "./styles";
 
 const CreateMember = () => {
-  const [type, setType] = useState("");
+  const [type, setType] = useState("associate");
 
   const handleChange = (event: SelectChangeEvent) => {
     setType(event.target.value as string);
@@ -37,9 +37,7 @@ const CreateMember = () => {
   return (
     <CreateMemberSearchStyles>
       <LayoutWithLogin>
-        <Box component="main"
-          className={styles.main}
-          id="wrapper">
+        <Box component="main" className={styles.main} id="wrapper">
           <Box className="form-bg">
             <img src="/Images/pattern.webp" className="bg-pattern" />
             <Box className="box-form">
@@ -75,8 +73,8 @@ const CreateMember = () => {
             </Box>
           </Box>
         </Box>
-      </LayoutWithLogin >
-    </CreateMemberSearchStyles >
+      </LayoutWithLogin>
+    </CreateMemberSearchStyles>
   );
 };
 
