@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box } from "@mui/material";
-import { PersonAdd, Groups, FindInPage } from "@mui/icons-material";
+import { PersonAdd, Groups, FindInPage, Home } from "@mui/icons-material";
 import Link from "next/link";
 import { Sidebarstyles } from "./styles";
 import { useRouter } from "next/router";
@@ -12,7 +12,7 @@ export default function SideBar() {
     {
       href: "/",
       title: "Homepage",
-      icon: <Groups />,
+      icon: <Home />,
     },
     {
       href: "/memberSearch",
@@ -39,10 +39,13 @@ export default function SideBar() {
               return (
                 <li
                   key={index}
-                  className={`${router.pathname === val.href ? "active" : "not-active"
-                    }`}
+                  className={`${
+                    router.pathname === val.href ? "active" : "not-active"
+                  }`}
                 >
-                  <Link href={val?.href}>{val?.title}</Link>
+                  <Link href={val?.href}>
+                    {val.icon} {val?.title}
+                  </Link>
                 </li>
               );
             })}

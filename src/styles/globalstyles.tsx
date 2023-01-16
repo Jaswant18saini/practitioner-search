@@ -15,8 +15,7 @@ padding: 0;
 font-family: var(--common-font);
 box-sizing: border-box; 
 }
-
-
+ 
 .row { 
     display: flex; 
     flex-wrap: wrap;
@@ -93,6 +92,8 @@ box-sizing: border-box;
   -webkit-transition: margin-left .3s ease;
   -o-transition: margin-left .3s ease;
   transition: margin-left .3s ease;
+  position: relative;
+  z-index: 9;
   @media (min-width: 768px){
     margin-left: 230px;
   } 
@@ -170,5 +171,14 @@ button.MuiButton-containedPrimary {
     color: #fff;
 }
 /* body css remove */
+body {
+    overflow: hidden;
+    padding: 0 !important;
+}
+p.errormsg {
+    color: #f00;
+    font-size: 14px;
+    margin-top: 10px;
+}
 `;
 export default GlobalStyle;
