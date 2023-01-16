@@ -1,15 +1,13 @@
-
-
-import { Box } from "@mui/material";
 import * as React from "react";
+import { Box } from "@mui/material";
 import { Footerstyles } from "./Foooter.styles";
-
 
 const Footer = () => {
     return (
         <Footerstyles>
             <Box id="footer">
                 <h1>Footer</h1>
+
                 <ul>
                     <li className="">
                         <a href="#">About</a>
@@ -29,7 +27,6 @@ const Footer = () => {
                     <li className="">
                         <a href="#">Contact</a>
                     </li>
-
                 </ul>
             </Box>
         </Footerstyles>
