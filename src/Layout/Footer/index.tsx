@@ -6,9 +6,8 @@ const Footer = () => {
     return (
         <Footerstyles>
             <Box id="footer">
-                <h1>Footer</h1>
-
-                <ul>
+                <p>Copyright © 2019 oeno.com All Rights Reserved.</p>
+                {/* <ul>
                     <li className="">
                         <a href="#">About</a>
                     </li>
@@ -27,7 +26,7 @@ const Footer = () => {
                     <li className="">
                         <a href="#">Contact</a>
                     </li>
-                </ul>
+                </ul> */}
             </Box>
         </Footerstyles>
     );

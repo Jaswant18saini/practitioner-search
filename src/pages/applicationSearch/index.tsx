@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
 import LayoutWithLogin from "@/Layout";
+import { ApplicationSearchStyles } from "./styles";
 
 const ApplicationSearch = () => {
   const [type, setType] = useState("");
@@ -62,52 +63,63 @@ const ApplicationSearch = () => {
   ];
 
   return (
-    <LayoutWithLogin>
-      <Box component="main"
-        className={styles.main}
-        id="wrapper">
-        <Box>
-          <p className="">View Applications</p>
-        </Box>
-        <Box>
-          <InputLabel>Application Type</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            label="Age"
-            onChange={handleChangeType}
-            value={type}
-          >
-            <MenuItem value={""}>Any</MenuItem>
-            {applicationType?.map((val, index) => {
-              return (
-                <MenuItem key={index} value={val?.value}>
-                  {val?.label}
-                </MenuItem>
-              );
-            })}
-          </Select>
+    <ApplicationSearchStyles>
+      <LayoutWithLogin>
+        <Box component="main"
+          className={styles.main}
+          id="wrapper">
+          <Box className="form-bg">
+            <img src="/Images/pattern.webp" className="bg-pattern" />
 
-          <InputLabel>Application status</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            label="Age"
-            onChange={handleChangeStatus}
-            value={status}
-          >
-            <MenuItem value={""}>Any</MenuItem>
-            {applicationStatus?.map((val, index) => {
-              return (
-                <MenuItem key={index} value={val?.value}>
-                  {val?.label}
-                </MenuItem>
-              );
-            })}
-          </Select>
+            <Box className="box-form">
+              <Box>
+                <h2 className="">View Applications</h2>
+              </Box>
+              <Box>
+                <Box className="form_Group">
+                  <InputLabel>Application Type</InputLabel>
+                  <Select className="form_Control"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    label="Age"
+                    onChange={handleChangeType}
+                    value={type}
+                  >
+                    <MenuItem value={""}>Any</MenuItem>
+                    {applicationType?.map((val, index) => {
+                      return (
+                        <MenuItem key={index} value={val?.value}>
+                          {val?.label}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </Box>
+                <Box className="form_Group">
+                  <InputLabel>Application status</InputLabel>
+                  <Select className="form_Control"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    label="Age"
+                    onChange={handleChangeStatus}
+                    value={status}
+                  >
+                    <MenuItem value={""}>Any</MenuItem>
+                    {applicationStatus?.map((val, index) => {
+                      return (
+                        <MenuItem key={index} value={val?.value}>
+                          {val?.label}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
         </Box>
-      </Box>
-    </LayoutWithLogin>
+      </LayoutWithLogin>
+    </ApplicationSearchStyles>
   );
 };
 

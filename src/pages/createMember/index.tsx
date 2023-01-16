@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import styles from "@/styles/Home.module.css";
 import LayoutWithLogin from "@/Layout";
+import { CreateMemberSearchStyles } from "./styles";
 
 const CreateMember = () => {
   const [type, setType] = useState("");
@@ -34,39 +35,50 @@ const CreateMember = () => {
   ];
 
   return (
-    <LayoutWithLogin>
-      <Box component="main"
-        className={styles.main}
-        id="wrapper">
-        <Box>
-          <p className="">View Applications</p>
-        </Box>
-        <InputLabel>Membership Type</InputLabel>
-        <Box>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            label="Age"
-            onChange={handleChange}
-            value={type}
-          >
-            <MenuItem value={""}>Any</MenuItem>
-            {MemeberShipTypes?.map((val, index) => {
-              return (
-                <MenuItem key={index} value={val?.value}>
-                  {val?.label}
-                </MenuItem>
-              );
-            })}
-          </Select>
-          <InputLabel>Last Name</InputLabel>
-          <Box className="form_Group">
-            <TextField className="form_Control" error={false} />
+    <CreateMemberSearchStyles>
+      <LayoutWithLogin>
+        <Box component="main"
+          className={styles.main}
+          id="wrapper">
+
+
+          <Box className="form-bg">
+            <img src="/Images/pattern.webp" className="bg-pattern" />
+            <Box className="box-form">
+              <Box>
+                <h2 className="">View Applications</h2>
+              </Box>
+              <Box className="form_Group">
+                <InputLabel>Membership Type</InputLabel>
+                <Box>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    label="Age"
+                    onChange={handleChange}
+                    value={type}
+                  >
+                    <MenuItem value={""}>Any</MenuItem>
+                    {MemeberShipTypes?.map((val, index) => {
+                      return (
+                        <MenuItem key={index} value={val?.value}>
+                          {val?.label}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                  <InputLabel>Last Name</InputLabel>
+                  <Box className="form_Group">
+                    <TextField className="form_Control" error={false} />
+                  </Box>
+                  <Button className="MuiButton-containedPrimary">Create</Button>
+                </Box>
+              </Box>
+            </Box>
           </Box>
-          <Button color="primary">Create</Button>
         </Box>
-      </Box>
-    </LayoutWithLogin>
+      </LayoutWithLogin >
+    </CreateMemberSearchStyles>
   );
 };
 
