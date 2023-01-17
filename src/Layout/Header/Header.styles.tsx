@@ -1,63 +1,78 @@
 import styled from "styled-components";
+import { space, layout, color } from "styled-system";
 
 export const Headerstyles = styled.div`
-        .logo-sec {
+  .logo-sec {
     max-width: 210px;
-}
+  }
 
-.app-sidebar__toggle {
+  .app-sidebar__toggle {
     line-height: 57px;
-    -webkit-transition: background-color .3s ease;
-    -o-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
     float: right;
-}
-.app-sidebar__toggle svg {
+  }
+  .app-sidebar__toggle svg {
     width: 20px;
     height: 20px;
     vertical-align: middle;
-}
-.app-sidebar__toggle svg rect{fill: rgb(40,36,61);-webkit-transition:.3s ease all;-o-transition:.3s ease all;transition:.3s ease all} 
-.app-sidebar__toggle svg rect:nth-child(1){-webkit-transform:scaleX(.8);-ms-transform:scaleX(.8);transform:scaleX(.8)}
-.app-sidebar__toggle:hover svg rect:nth-child(1){-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)} 
-.search-results, form.form-search .input-group {
+  }
+  .app-sidebar__toggle svg rect {
+    fill: rgb(40, 36, 61);
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+  }
+  .app-sidebar__toggle svg rect:nth-child(1) {
+    -webkit-transform: scaleX(0.8);
+    -ms-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+  .app-sidebar__toggle:hover svg rect:nth-child(1) {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  .search-results,
+  form.form-search .input-group {
     border: 1px solid #ccc;
-}
- 
-.form-search {
+  }
+
+  .form-search {
     max-width: 500px;
     margin-left: auto;
-}
- 
-#header {
+  }
+
+  #header {
     box-shadow: 0px 3px 21px rgb(194 161 254 / 42%);
     height: 60px;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    width: 100%; 
+    width: 100%;
     display: block;
     background-color: #ffffff;
     z-index: 1030;
-}
-.form-search {
+  }
+  .form-search {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
- .input-group {
-    margin-top: 9px;
-    padding: 0 0 0 15px;
-    border-radius: 20px;
-    position: relative; 
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: stretch;
-    width: 100%;
-}
-}
+    .input-group {
+      margin-top: 9px;
+      padding: 0 0 0 15px;
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      width: 100%;
+    }
+  }
 
-#searchbtn {
+  #searchbtn {
     padding: 0px 20px 0 0;
     margin-top: 10px;
     color: #7f7f7f;
@@ -74,9 +89,9 @@ export const Headerstyles = styled.div`
     cursor: pointer;
     border: 0;
     margin-top: 0;
-} 
+  }
 
-input#ed-srch-term {
+  input#ed-srch-term {
     position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -90,41 +105,43 @@ input#ed-srch-term {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
-    }
-form.form-search .input-group {
+  }
+  form.form-search .input-group {
     margin-top: 9px;
     padding: 0 0 0 15px;
     border-radius: 20px;
-}
+  }
 
-a.logo{ 
-    display: block;  
+  a.logo {
+    display: block;
     position: absolute;
     top: calc(50% + 1px);
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
     img {
-    max-width: 100%;
-    height: 50px;
-    width: 100%;
-    object-fit: contain;
-}
-
-}
-.header_actions { 
+      max-width: 100%;
+      height: 50px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .header_actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     height: 100%;
-}
-.icons {
+  }
+  .icons {
     display: flex;
     align-items: center;
     gap: 10px;
-    a{
-        display: inline-flex;
-        svg {
-                color: #572B73;
-            }
+    a {
+      display: inline-flex;
+      svg {
+        color: ${(props) => props.theme.colors.purple};
+      }
     }
-}
+    button {
+      color: ${(props) => props.theme.colors.purple};
+    }
+  }
 `;

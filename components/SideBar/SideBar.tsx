@@ -4,32 +4,38 @@ import { PersonAdd, Groups, FindInPage, Home } from "@mui/icons-material";
 import Link from "next/link";
 import { Sidebarstyles } from "./styles";
 import { useRouter } from "next/router";
+import _ from "lodash";
 
 export default function SideBar() {
   const router = useRouter();
 
   const menuItems = [
     {
-      href: "/",
+      multiHref: ["/", "/dashboard"],
+      link: "/",
       title: "Homepage",
       icon: <Home />,
     },
     {
-      href: "/memberSearch",
+      multiHref: ["/memberSearch"],
+      link: "/memberSearch",
       title: "Member Search",
       icon: <Groups />,
     },
     {
-      href: "/applicationSearch",
+      multiHref: ["/applicationSearch"],
+      link: "/applicationSearch",
       title: "Application Search",
       icon: <FindInPage />,
     },
     {
-      href: "/createMember",
+      multiHref: ["/createMember"],
+      link: "/createMember",
       title: "Create Member",
       icon: <PersonAdd />,
     },
   ];
+
   return (
     <Sidebarstyles>
       <Box id="sidebar" className="sidebar">
@@ -39,11 +45,13 @@ export default function SideBar() {
               return (
                 <li
                   key={index}
-                  className={`${
-                    router.pathname === val.href ? "active" : "not-active"
-                  }`}
+                  className={
+                    _.includes(val?.multiHref, router.pathname)
+                      ? "active"
+                      : "not-active"
+                  }
                 >
-                  <Link href={val?.href}>
+                  <Link href={val?.link}>
                     {val.icon} {val?.title}
                   </Link>
                 </li>

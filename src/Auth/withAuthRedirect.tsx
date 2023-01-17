@@ -1,4 +1,3 @@
-
 import React, { ReactElement, useEffect } from "react";
 import { useRouter } from "next/router";
 import { NextPage } from "next";
@@ -21,7 +20,6 @@ const DefaultLoadingFallback = (): ReactElement => (
   </Box>
 );
 
-
 const withAuthRedirect = function withAuthRedirect<CP, IP = CP>({
   WrappedComponent,
   LoadingComponent = DefaultLoadingFallback,
@@ -37,19 +35,13 @@ const withAuthRedirect = function withAuthRedirect<CP, IP = CP>({
     const router = useRouter();
 
     useEffect(() => {
-      const isLogin = localStorage.getItem('Login') === "true" ? true : false;
+      const isLogin = localStorage.getItem("Login") === "true" ? true : false;
       if (isBrowser() && expectedAuth !== isLogin) {
         router.push(location);
       }
-    }, [])
+    }, []);
 
-
-
-    return (
-      <>
-        <WrappedComponent {...{ router }} />
-      </>
-    );
+    return <WrappedComponent {...{ router }} />;
   };
   return WithAuthRedirectWrapper;
 };
