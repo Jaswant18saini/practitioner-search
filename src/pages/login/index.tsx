@@ -4,9 +4,7 @@ import useLoginHook from "@/hooks/login.hook";
 import LoginComponent from "@/PagesComponents/Login";
 
 const Login = (props: ILoginProps) => {
-  const [
-    _handleLogin,
-  ] = useLoginHook(props);
+  const [_handleLogin] = useLoginHook(props);
 
   return (
     <LoginComponent {...{ _handleLogin }} />

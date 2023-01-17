@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Sidebarstyles = styled.div`
+const SidebarStyles = styled.div`
   #sidebar {
     position: fixed;
     top: 0;
@@ -60,3 +60,5 @@ export const Sidebarstyles = styled.div`
     }
   }
 `;
+
+export default SidebarStyles;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { space, layout, color } from "styled-system";
 
 export const Headerstyles = styled.div`
   .logo-sec {

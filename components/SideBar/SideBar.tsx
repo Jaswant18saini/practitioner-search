@@ -2,7 +2,7 @@ import * as React from "react";
 import { Box } from "@mui/material";
 import { PersonAdd, Groups, FindInPage, Home } from "@mui/icons-material";
 import Link from "next/link";
-import { Sidebarstyles } from "./styles";
+import SidebarStyles from "./Sidebar.styles";
 import { useRouter } from "next/router";
 import _ from "lodash";
 
@@ -37,29 +37,20 @@ export default function SideBar() {
   ];
 
   return (
-    <Sidebarstyles>
+    <SidebarStyles>
       <Box id="sidebar" className="sidebar">
         <nav>
           <ul>
             {menuItems?.map((val, index) => {
               return (
-                <li
-                  key={index}
-                  className={
-                    _.includes(val?.multiHref, router.pathname)
-                      ? "active"
-                      : "not-active"
-                  }
-                >
-                  <Link href={val?.link}>
-                    {val.icon} {val?.title}
-                  </Link>
+                <li key={index} className={_.includes(val?.multiHref, router.pathname) ? "active" : "not-active"}>
+                  <Link href={val?.link}>{val.icon} {val?.title}</Link>
                 </li>
               );
             })}
           </ul>
         </nav>
       </Box>
-    </Sidebarstyles>
+    </SidebarStyles>
   );
 }

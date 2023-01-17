@@ -1,6 +1,4 @@
-import ILoginProps, {
-  LoginCredential,
-} from "@/PagesComponents/Login/Login.interface";
+import ILoginProps, { LoginCredential } from "@/PagesComponents/Login/Login.interface";
 
 const useLoginHook = (props: ILoginProps) => {
   const { router } = props;
