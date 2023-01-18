@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ApplicationSearchStyles = styled.div`
+const MemberSearchStyles = styled.div`
   position: relative;
   z-index: 1;
   .form-bg {
@@ -10,9 +10,12 @@ const ApplicationSearchStyles = styled.div`
     img.bg-pattern {
       opacity: 0.1;
     }
+    .form_memberSearch{
+      padding: 0 40px 40px;
+    }
     .box-form {
       background: #ffff;
-      padding: 50px;
+      padding: 0px;
       margin: 0 auto;
       border-radius: 10px;
       max-width: 40vw;
@@ -21,8 +24,21 @@ const ApplicationSearchStyles = styled.div`
         font-family: var(--common-font);
         margin-bottom: 20px;
         color: var(--purple);
+        padding: 40px 40px 20px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+         &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: calc(50% + 8px);
+          transform: translateY(-50%);
+          width: 2px;
+          height: 30px;
+          background: var(--purple);
+      }
         a {
-          color: #1d619f;
+          color: var(--pink);
           text-decoration: underline;
           text-underline-offset: 3px;
         }
@@ -34,16 +50,15 @@ const ApplicationSearchStyles = styled.div`
       top: 0px;
       left: 0px;
       z-index: -1;
-      opacity: 0.08;
-      height: 100vh;
+      opacity: 0.05;
+      height: 100vh; 
     }
     .form_Control,
     .form_Group .MuiInputBase-colorPrimary {
       width: 100%;
       max-width: 100%;
     }
-    .form_Group {
-      margin-bottom: 15px;
+    .form_Group { 
       fieldset legend span,
       fieldset legend {
         display: none;
@@ -51,6 +66,9 @@ const ApplicationSearchStyles = styled.div`
       fieldset {
         top: 0;
       }
+    }
+    .form_Group:not(:last-child){
+      margin-bottom: 25px;
     }
     label.MuiFormLabel-root {
       color: #000;
@@ -69,4 +87,4 @@ const ApplicationSearchStyles = styled.div`
     }
   }
 `;
-export default ApplicationSearchStyles;
+export default MemberSearchStyles;

@@ -1,13 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle` 
- @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 :root{
    --common-font:  'Nunito', sans-serif;
    --orange:${(props) => props.theme.colors.orange};
    --purple:${(props) => props.theme.colors.purple};
    --black:${(props) => props.theme.colors.black};
    --pink: ${(props) => props.theme.colors.pink};
+   --site-gradient: ${(props) => props.theme.colors.gardientSite};;
 }
   * {
 margin: 0;
@@ -15,7 +16,9 @@ padding: 0;
 font-family: var(--common-font);
 box-sizing: border-box; 
 }
- 
+ a{
+  text-decoration: none;
+ }
 .row { 
     display: flex; 
     flex-wrap: wrap;
@@ -122,6 +125,7 @@ button.MuiButton-containedPrimary {
     font-family: var(--commont-font);
     width: 100%;
     max-width: 150px;
+    text-transform: capitalize;
     &:hover{
       color:  var(--orange);
     border: 2px solid  var(--orange);
@@ -171,10 +175,7 @@ button.MuiButton-containedPrimary {
     color: #fff;
 }
 /* body css remove */
-body {
-    overflow: hidden;
-    padding: 0 !important;
-}
+ 
 p.errormsg {
     color: #f00;
     font-size: 14px;

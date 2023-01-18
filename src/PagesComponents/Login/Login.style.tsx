@@ -27,7 +27,7 @@ export const Loginstyles = styled.div`
         padding: 30px 15px;
         border-radius: 0 100% 100% 0;
         background: #fff;
-        background: linear-gradient(132deg, #A31265, var(--purple), #1D619F);
+        background: var(--site-gradient);
         background-size: 400% 400%;
         animation: Gradient 15s ease infinite;
     }

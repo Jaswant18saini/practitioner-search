@@ -33,7 +33,7 @@ const ApplicationSearchComponent = () => {
             <Box>
               <h2 className="">View Applications</h2>
             </Box>
-            <Box>
+            <Box className="form_memberSearch">
               <Box className="form_Group">
                 <InputLabel>Application Type</InputLabel>
                 <Select
